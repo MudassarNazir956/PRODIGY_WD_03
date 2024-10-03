@@ -1,0 +1,113 @@
+:root {
+    --body-color: #313235;
+    --primary-bg-color: #d53626;
+    --winner-bg-color: #32a852;
+    --box-shadow-color: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+*{
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: 0.2s ease-in-out;
+    user-select: none;
+}
+
+.align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-color: var(--body-color);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    text-align: center;
+    padding-top: 1vh;
+    letter-spacing: 2px;
+}
+
+.container h1{
+    font-weight: 600;
+    text-shadow: var(--box-shadow-color);
+}
+
+.turn-container{
+    width: 170px;
+    height: 80px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+}
+
+.turn-container h3{
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-shadow: var(--box-shadow-color);
+}
+
+.turn-container .turn-box{
+    border: 2px solid #000;
+    font-size: 1.6rem;
+    font-weight: 700;
+    height: 40px;
+}
+
+.turn-container .turn-box:nth-child(even){
+    border-right: none;
+}
+
+.bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 85px;
+    height: 42px;
+    background-color: var(--primary-bg-color);
+    z-index: -1;
+}
+
+.main-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 265px;
+    width: 265px;
+    margin: 30px auto;
+    border: 2px solid #000;
+}
+
+.box{
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 2px solid #000;
+}
+
+.box:hover{
+    background-color: var(--primary-bg-color);
+    box-shadow: var(--box-shadow-color);
+}
+
+#play-again{
+    background-color: var(--primary-bg-color);
+    padding: 10px 25px;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    letter-spacing: 1px;
+}
+
+#play-again:hover{
+    padding: 10px 40px;
+    background-color: #32a852;
+    color: #000;
+    font-weight: 800;
+}
